@@ -1,0 +1,10 @@
+
+
+/* Ocultar Coluna Especie, Quando Abaixo de 768px  */
+@media only screen and (max-width: 768px) {
+    .coluna_especie{ display: none;}
+}
+
+
+
+

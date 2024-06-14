@@ -1,0 +1,27 @@
+<div class="container">
+
+<h2>Personagem</h2>
+
+<div className="col-md-6" style="margin-top: 40px;">  
+    <form #form="ngForm" *ngIf="personage">
+
+        <input type="text" class="form-control" name="id"       disabled 
+        [(ngModel)]="personage.id"
+        style="width: 400px; margin-bottom: 10px;"/>  
+
+        <input type="text" class="form-control" name="name"     disabled 
+        [(ngModel)]="personage.name"
+        style="width: 400px; margin-bottom: 10px;"/>    
+
+        <input type="text" class="form-control" name="species"  disabled 
+        [(ngModel)]="personage.species"
+        style="width: 400px; margin-bottom: 25px;"/>    
+
+        <p-button label="Voltar" styleClass="p-button-raised" 
+        (click)="voltar()"></p-button>
+
+    </form>
+</div>
+
+</div>
+

@@ -1,0 +1,70 @@
+<!-- BootStrap 5: Cabeçalho (Objeto NavBar) -->
+<nav class="navbar fixed-top  navbar-dark bg-dark  navbar-expand-md"  id="nav">
+    <!-- Tipo Container: Container(Tem Margens) e ContainerFluid(Linha Toda)    -->
+    <div class="container-fluid">
+        <!-- Brand 				(Fica Quando Redimensionamento Tela) 			-->
+        <a class="navbar-brand" style="margin-left: 10px;" href="/home">
+            <!-- <img  src="../../../assets/img/logo.jpg" height="45px" style="margin-top:-18px; margin-bottom:-15px" /> -->
+            <img  src="assets/img/logo_l5.webp" height="45px" style="margin-top:-18px; margin-bottom:-15px" />
+            <span style="color:white; font-size: 18px; margin-left: 5px; margin-right: 60px"> L5 Networks</span>
+        </a>
+
+        <!-- Menu Hamburguer 	(Aparece Quando Redimensionamento Tela) 		-->
+        <button class="navbar-toggler w-auto"  data-bs-toggle="collapse"  data-bs-target="#menu_hamburger" 
+        aria-controls="#menu"  aria-expanded="false"  aria-label="Toggle navigation"  type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Conteúdo  			(ID ígual ao DataBsTarget do Menu Hamburguer)	-->
+        <div class="collapse navbar-collapse" id="menu_hamburger" style="font-size: 15px;">
+            <!-- Esquerdo/Centro - ME-Auto  	  								-->
+            <ul class="navbar-nav me-auto">
+                <!-- Link - Normal e Desabilitado -->
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#">Contato</a></li>
+                
+                <!-- Link - DropDown -->
+                <li class="nav-item dropdown">
+                    <!-- Menu  -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>DropDown</span>
+                    </a>
+                
+                    <!-- Conteúdo e Separador -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="font-size: 14px;">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Direito 		 - Sem ME-Auto  								-->
+            <ul class="navbar-nav" style="margin-right: 90px;">
+                <!-- Link - Normal e Desabilitado -->
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+        
+
+                <!-- Link - DropDown -->
+                <li class="nav-item dropdown">
+                    <!-- Menu  -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>Perfil</span>
+                    </a>
+                
+                    <!-- Conteúdo e Separador -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="font-size:14px">
+                        <li><a class="dropdown-item" href="#" (click)=logout()>Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Action 2</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+	</div>
+</nav>
+
+

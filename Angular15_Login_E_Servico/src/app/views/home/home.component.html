@@ -1,0 +1,134 @@
+<!-- Componente: 	Trecho Código 	(Cabeçalho do BootStrap) -->
+<navbar-partials></navbar-partials>
+
+<!-- Objeto Tabela: LibE PrimeNG -->
+<div class="container" style="margin-top: 50px">
+	<div class="row">
+		<p-card styleClass="shadow-3 mt-1 text-indigo-800" header="Lista Personagens">
+			<p-table
+				#personagensTable
+				[value]="listaPersonagens"
+				[rows]="5"
+				[paginator]="true"
+				[globalFilterFields]="['name']"
+				[tableStyle]="{  }"
+			
+				[rowHover]="true"
+				[showCurrentPageReport]="true"
+				dataKey="id"
+				currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} produtos">
+				
+				<!-- Cabeçalho -->
+				<ng-template pTemplate="header">
+				<tr>
+				
+					<th pSortableColumn="id" style="width: 100px !important;">
+						<div class="col-1 flex justify-content-between align-items-center">
+							<div class="flex justify-content-between align-items-center">Id</div>
+							<div class="flex justify-content-between align-items-center">
+							<p-sortIcon field="id"></p-sortIcon>
+							<p-columnFilter
+								type="number"
+								field="id"
+								display="menu"
+								matchMode="contains"
+								[showMatchModes]="false"
+								[showOperator]="false"
+								[showAddButton]="false"
+							></p-columnFilter>
+							</div>
+						</div>
+					</th>
+
+					<th pSortableColumn="name" style="width: 200px !important;">
+					<div class="col-2 flex justify-content-between align-items-center">
+						<div class="flex justify-content-between align-items-center">Nome</div>
+						<div class="flex justify-content-between align-items-center">
+						<p-sortIcon field="name"></p-sortIcon>
+						<p-columnFilter
+							type="text"
+							field="name"
+							display="menu"
+							matchMode="contains"
+							[showMatchModes]="false"
+							[showOperator]="false"
+							[showAddButton]="false"
+						></p-columnFilter>
+						</div>
+					</div>
+					</th>
+		
+					<th class="coluna_especie" pSortableColumn="species" style="width: 200px !important;">
+					<div class="col-1 flex justify-content-between align-items-center">
+						<div class="flex justify-content-between align-items-center">Espécie</div>
+						<div class="flex justify-content-between align-items-center">
+						<p-sortIcon field="species"></p-sortIcon>
+						<p-columnFilter
+							type="text"
+							field="species"
+							display="menu"
+							matchMode="contains"
+							[showMatchModes]="false"
+							[showOperator]="false"
+							[showAddButton]="false"
+						></p-columnFilter>
+						</div>
+					</div>
+					</th>
+		
+					<th style="width: 100px !important">
+					<div style="display: flex; justify-content: center">
+						<p-button
+						styleClass="p-button-info  p-button-sm"
+						icon="pi pi-plus"
+						label="Add"
+						pTooltip="Adicionar produto"
+						tooltipPosition="top"
+						></p-button>
+					</div>
+					</th>
+				</tr>
+				</ng-template>
+		
+				<!-- Corpo -->
+				<ng-template pTemplate="body" let-listaX>
+				<tr>
+					<td>{{ listaX?.id }}</td>
+					<td>{{ listaX?.name }}</td>
+					<td class="coluna_especie">{{ listaX?.species}}</td>
+					<td>
+					<div
+						class="flex justify-content-center gap-3 align-content-center align-items-center"
+					>
+						<button
+						pButton
+						pRipple
+						icon="pi pi-pencil"
+						class="p-button-rounded p-button-warning"
+						pTooltip="Editar registro"
+						tooltipPosition="top"
+						(click)="btnEditar(listaX?.id)"
+						style="width: 35px!important; height: 35px!important;"
+						></button>
+
+						<button
+						pButton
+						pRipple
+						icon="pi pi-trash"
+						class="p-button-rounded p-button-danger"
+						pTooltip="Remover registro"
+						tooltipPosition="top"
+						style="width: 35px!important; height: 35px!important;"
+						></button>
+					</div>
+					</td>
+				</tr>
+				</ng-template>
+			</p-table>
+		</p-card>
+	</div>
+</div>
+
+
+
+
